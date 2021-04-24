@@ -260,7 +260,7 @@
 262,9280,ford,door,2016,clean vehicle,101380.0,white,  1ftfw1ef9gkf57726,167656757,texas, usa,2 days left
 263,900,ford,van,2003,clean vehicle,142027.0,white,  1ftne24293hb19928,167758752,florida, usa,2 hours left
 264,7560,ford,door,2016,clean vehicle,111476.0,gray,  1ftfx1ef7gkd59790,167656758,texas, usa,2 days left
-265,19500,ford,drw,2011,clean vehicle,76897.0,white,  1fd8w3gt0beb32874,167759102,pennsylvania, usa,2 days left
+265,19500,ford,f-350,2011,clean vehicle,76897.0,white,  1fd8w3gt0beb32874,167759102,pennsylvania, usa,2 days left
 266,17100,chevrolet,malibu,2019,clean vehicle,15780.0,white,  1g1zd5st5kf112138,167767034,washington, usa,2 days left
 267,8020,ford,door,2016,clean vehicle,31944.0,white,  1ftew1cp2gke43168,167656759,texas, usa,2 days left
 268,10300,ford,fiesta,2019,clean vehicle,18937.0,black,  3fadp4bjxkm123238,167759377,missouri, usa,4 days left
@@ -1162,7 +1162,7 @@
 1210,30977,ford,doors,2015,clean vehicle,28937.0,competition orange,  1fa6p8cf8f5308068,167715942,pennsylvania, usa,12 days left
 1211,13799,ford,doors,2015,clean vehicle,83693.0,red,  1fa6p8am3f5330934,167715943,new jersey, usa,12 days left
 1212,20500,ford,srw,2014,clean vehicle,90888.0,white,  1fd7x3a68eeb54072,167771072,arizona, usa,2 days left
-1213,8500,ford,drw,2012,clean vehicle,216942.0,white,  1fdrf3ht6cea87430,167771079,texas, usa,18 hours left
+1213,8500,ford,f-350,2012,clean vehicle,216942.0,white,  1fdrf3ht6cea87430,167771079,texas, usa,18 hours left
 1214,9900,ford,door,2015,clean vehicle,205796.0,white,  1ftbf2a6xfeb60033,167771183,florida, usa,24 hours left
 1215,65500,ford,srw,2019,clean vehicle,6500.0,black,  1ft7w2bt0kec44818,167718954,indiana, usa,21 hours left
 1216,24500,ford,wagon,2018,clean vehicle,39943.0,white,  1fbzx2zm1jka44328,167772606,florida, usa,2 days left
@@ -1285,11 +1285,11 @@
 1333,25500,ford,transit,2019,clean vehicle,11251.0,white,  1ftyr1zm2kka42617,167738248,illinois, usa,21 hours left
 1334,63000,ford,srw,2019,clean vehicle,11640.0,no_color,  1ft7w2bt7ked44785,167780677,illinois, usa,21 hours left
 1335,44000,ford,srw,2019,clean vehicle,10763.0,white,  1ft7w2bt2ked42670,167780679,illinois, usa,2 days left
-1336,70000,ford,drw,2019,clean vehicle,9643.0,no_color,  1ft8w3dt3kee48276,167780680,illinois, usa,2 days left
+1336,70000,ford,f-350,2019,clean vehicle,9643.0,no_color,  1ft8w3dt3kee48276,167780680,illinois, usa,2 days left
 1337,56200,ford,srw,2019,clean vehicle,33930.0,gray,  1ft7w2bt6kee88988,167738656,kentucky, usa,21 hours left
 1338,35000,ford,srw,2019,clean vehicle,26451.0,white,  1ft7w2b64kec00217,167780681,wisconsin, usa,2 days left
 1339,57700,ford,srw,2019,clean vehicle,21101.0,red,  1ft7w2bt6kee59894,167738658,kentucky, usa,21 hours left
-1340,74000,ford,drw,2019,clean vehicle,10536.0,no_color,  1ft8w4dt6ked32656,167780682,illinois, usa,2 days left
+1340,74000,ford,f-350,2019,clean vehicle,10536.0,no_color,  1ft8w4dt6ked32656,167780682,illinois, usa,2 days left
 1341,60200,ford,srw,2019,clean vehicle,31744.0,white,  1ft7w2bt6ked11132,167738659,kentucky, usa,21 hours left
 1342,60000,ford,srw,2018,clean vehicle,18062.0,black,  1ft7w2btxjeb54932,167780683,illinois, usa,2 days left
 1343,63000,ford,srw,2018,clean vehicle,17942.0,black,  1ft7w2bt3jec31754,167780684,illinois, usa,21 hours left
@@ -1323,7 +1323,7 @@
 1371,26800,ford,door,2015,clean vehicle,108998.0,white,  1ft8w3bt4fec75439,167782025,new jersey, usa,24 hours left
 1372,36000,ford,max,2018,clean vehicle,58576.0,gray,  1fmjk1jt1jea23803,167472824,wisconsin, usa,22 hours left
 1373,20000,ford,wagon,2018,clean vehicle,55475.0,white,  1fbzx2zm6jka97476,167472829,wisconsin, usa,21 hours left
-1374,46700,ford,drw,2019,clean vehicle,35929.0,black,  1ft8w3dt6kef15629,167741758,alabama, usa,21 hours left
+1374,46700,ford,f-350,2019,clean vehicle,35929.0,black,  1ft8w3dt6kef15629,167741758,alabama, usa,21 hours left
 1375,42800,ford,srw,2019,clean vehicle,21669.0,silver,  1ft7w2btxkee45528,167741762,alabama, usa,21 hours left
 1376,21800,ford,mustang,2018,clean vehicle,16079.0,no_color,  1fa6p8th0j5176725,167782357,california, usa,21 hours left
 1377,18800,ford,mustang,2018,clean vehicle,41147.0,white,  1fa6p8th1j5133883,167782359,california, usa,2 days left
@@ -1533,16 +1533,16 @@
 1581,15500,ford,srw,2017,clean vehicle,132150.0,white,  1ft7x2b69hec16645,167788232,oregon, usa,28 minutes
 1582,19000,ford,taurus,2019,clean vehicle,12928.0,gray,  1fahp2j84kg115859,167745465,pennsylvania, usa,3 days left
 1583,5500,ford,door,2015,clean vehicle,116539.0,silver,  1fmcu0gx1fub82812,167564982,oklahoma, usa,8 days left
-1584,38700,ford,drw,2018,clean vehicle,59549.0,white,  1fd8w3ht1jeb13182,167788236,oklahoma, usa,21 hours left
+1584,38700,ford,f-350,2018,clean vehicle,59549.0,white,  1fd8w3ht1jeb13182,167788236,oklahoma, usa,21 hours left
 1585,21000,ford,taurus,2019,clean vehicle,12174.0,red,  1fahp2j81kg116841,167745472,pennsylvania, usa,3 days left
 1586,28500,ford,door,2016,clean vehicle,96129.0,white,  1ft8w3dt6ged23165,167565003,oklahoma, usa,8 days left
-1587,37200,ford,drw,2018,clean vehicle,89809.0,white,  1fd0w5ht9jeb13276,167788237,oklahoma, usa,21 hours left
+1587,37200,ford,f-350,2018,clean vehicle,89809.0,white,  1fd0w5ht9jeb13276,167788237,oklahoma, usa,21 hours left
 1588,18500,ford,taurus,2019,clean vehicle,18202.0,white,  1fahp2j8xkg115025,167745529,pennsylvania, usa,3 days left
 1589,15000,ford,door,2015,clean vehicle,128505.0,white,  1ft7w2bt2fea81305,167565004,oklahoma, usa,8 days left
-1590,37700,ford,drw,2017,clean vehicle,43527.0,white,  1fd8w3htxhed36198,167788238,oklahoma, usa,21 hours left
+1590,37700,ford,f-350,2017,clean vehicle,43527.0,white,  1fd8w3htxhed36198,167788238,oklahoma, usa,21 hours left
 1591,22200,ford,transit,2019,clean vehicle,15792.0,white,  1ftyr2cm5kkb55220,167745530,pennsylvania, usa,2 days left
 1592,39950,ford,f-150,2019,clean vehicle,9278.0,white,  1ftew1e42kfc12713,167565282,georgia, usa,4 days left
-1593,37600,ford,drw,2017,clean vehicle,41925.0,white,  1fd8w3ht6hed35386,167788239,oklahoma, usa,21 hours left
+1593,37600,ford,f-350,2017,clean vehicle,41925.0,white,  1fd8w3ht6hed35386,167788239,oklahoma, usa,21 hours left
 1594,18500,ford,taurus,2019,clean vehicle,16924.0,white,  1fahp2j87kg116553,167745531,pennsylvania, usa,3 days left
 1595,10000,ford,door,2013,clean vehicle,119869.0,silver,  1fm5k7f93dgc57984,167789003,florida, usa,2 days left
 1596,20500,ford,taurus,2019,clean vehicle,17260.0,silver,  1fahp2j89kg115971,167745532,pennsylvania, usa,3 days left
@@ -1729,7 +1729,7 @@
 1777,22500,ford,door,2016,clean vehicle,50423.0,silver,  1ftew1cg0gke04837,167799260,nevada, usa,Listing Expired
 1778,41200,ford,srw,2019,clean vehicle,25638.0,gray,  1ft7w2bt2kee85523,167752929,tennessee, usa,21 hours left
 1779,20400,ford,door,2017,clean vehicle,59798.0,gray,  1fm5k7f8xhgd79206,167799455,florida, usa,Listing Expired
-1780,49900,ford,drw,2019,clean vehicle,5035.0,black,  1ft8w3dt1kee72172,167752930,virginia, usa,21 hours left
+1780,49900,ford,f-350,2019,clean vehicle,5035.0,black,  1ft8w3dt1kee72172,167752930,virginia, usa,21 hours left
 1781,12100,ford,escape,2017,clean vehicle,32284.0,silver,  1fmcu0f78huc53640,167799553,new york, usa,18 hours left
 1782,24000,ford,door,2016,clean vehicle,40371.0,blue,  1ftew1cf8gke70396,167799584,florida, usa,Listing Expired
 1783,9500,ford,escape,2017,clean vehicle,107569.0,white,  1fmcu9gd8hub34463,167799596,new york, usa,18 hours left
@@ -1813,10 +1813,10 @@
 1861,16800,ford,escape,2019,clean vehicle,13155.0,white,  1fmcu0gd2kuc33587,167801385,florida, usa,2 days left
 1862,51000,ford,max,2019,clean vehicle,24869.0,red,  1fmjk2at0kea45301,167615142,minnesota, usa,14 hours left
 1863,16500,ford,escape,2019,clean vehicle,18454.0,white,  1fmcu0gd3kub08839,167801389,florida, usa,2 days left
-1864,10000,ford,d,2016,salvage insurance,16694.0,white,  nm0ls7f70g1257651,167530319,texas, usa,16 hours left
+1864,10000,ford,transit,2016,salvage insurance,16694.0,white,  nm0ls7f70g1257651,167530319,texas, usa,16 hours left
 1865,27900,ford,explorer,2019,clean vehicle,28922.0,gray,  1fm5k7f81kgb41445,167801390,florida, usa,2 days left
 1866,23700,ford,edge,2019,clean vehicle,23534.0,gray,  2fmpk3k91kbb56583,167801391,florida, usa,1 days left
-1867,20000,ford,dr,2012,salvage insurance,24581.0,color:,  3frxw7fe4cv310949,167530331,california, usa,16 hours left
+1867,20000,ford,f-750,2012,salvage insurance,24581.0,color:,  3frxw7fe4cv310949,167530331,california, usa,16 hours left
 1868,45600,ford,max,2019,clean vehicle,35646.0,gray,  1fmjk2at2kea17807,167801392,florida, usa,2 days left
 1869,6000,ford,cab,2012,salvage insurance,129873.0,white,  1fduf5gt7ceb24329,167530332,virginia, usa,16 hours left
 1870,15600,ford,escape,2019,clean vehicle,28669.0,black,  1fmcu0gd0kub14114,167801393,florida, usa,2 days left
@@ -1841,7 +1841,7 @@
 1889,18500,ford,doors,2016,clean vehicle,45814.0,black,  1fa6p8thxg5208671,167653515,new york, usa,11 days left
 1890,32000,ford,f-150,2019,clean vehicle,17310.0,red,  1ftfw1e55kkd19095,167615279,minnesota, usa,14 hours left
 1891,28300,ford,explorer,2019,clean vehicle,24116.0,gray,  1fm5k7f82kgb41597,167801403,florida, usa,2 days left
-1892,10500,ford,d,2019,salvage insurance,14128.0,blue,  maj3s2ge4kc278721,167534773,florida, usa,15 hours left
+1892,10500,ford,transit,2019,salvage insurance,14128.0,blue,  maj3s2ge4kc278721,167534773,florida, usa,15 hours left
 1893,24970,ford,doors,2016,clean vehicle,49882.0,green,  1fa6p8cf8g5225189,167653516,new york, usa,11 days left
 1894,13800,ford,fusion,2019,clean vehicle,38964.0,blue,  3fa6p0luxkr109398,167615280,minnesota, usa,14 hours left
 1895,2580,ford,door,2012,clean vehicle,102705.0,white,  3fahp0ga5cr113207,167737580,florida, usa,24 hours left
