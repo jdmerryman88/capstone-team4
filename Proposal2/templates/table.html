@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data</title>
+
+    <!-- Bootstrap and Bootswatch CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <!--<link rel="stylesheet" href="assets/css/d3Style.css">-->
+
+    <!-- <link rel="stylesheet"  href="style.css">-->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script> -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+    <script type="text/javascript" src="../static/js/app3.js"></script>
+
+    <!--FROM SAM-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <!-- Buttons -->
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <!-- need to add on 25 the home page -->
+            <img src="../static/images/logo1.PNG" alt="logo" style="width:10%;height:10%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Visualizations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/makePredictions">Predictor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/data">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/resources">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--JUMBOTRON-->
+    <!--<div class="jumbotron text-center">
+        <h3 class="display-3">Dallas Crime Data for 2020</h3>
+    </div>-->
+
+    <div class="row text-center" style="margin-top:3%">
+        <div class="col-md-12">
+            <h6 class="display-4">Data</h6>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row margin-top-50">
+            <div class="col-md-3">
+                <!--FILTERS-->
+                <div class="card border-primary mb-3">
+            <div class="card-header">Filters</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label class="col-form-label" for="carat">Carat</label>
+                                <input type="text" class="form-control" value="0.25" id="carat">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="cut">Cut</label>
+                            <select id="cut">
+                                <option value="1">Ideal</option>
+                                <option value="2">Premium</option>
+                                <option value="3">Very Good</option>
+                                <option value="4">Good</option>
+                                <option value="5">Fair</option>
+                                <option value="6">Poor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="color">Color</label></br>
+                            <select id="color">
+                                <option value="1">D</option>
+                                <option value="2">E</option>
+                                <option value="3">F</option>
+                                <option value="4">G</option>
+                                <option value="5">H</option>
+                                <option value="6">I</option>
+                                <option value="7">J</option>
+                                <option value="8">K</option>
+                                <option value="9">L</option>
+                                <option value="10">M</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="clarity">Clarity</label></br>
+                            <select id="clarity">
+                                <option value="1">FL</option>
+                                <option value="2">IF</option>
+                                <option value="3">VVS1</option>
+                                <option value="4">VVS2</option>
+                                <option value="5">VS1</option>
+                                <option value="6">VS2</option>
+                                <option value="7">SI1</option>
+                                <option value="8">SI2</option>
+                                <option value="9">SI3</option>
+                                <option value="10">I1</option>
+                                <option value="11">I2</option>
+                                <option value="12">I3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="depth">Depth</label>
+                            <input type="text" class="form-control" value="60.00" id="depth">
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label" for="table">Table</label>
+                            <input type="text" class="form-control" value="60.00" id="table">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="length_mm">Length (mm)</label>
+                            <input type="text" class="form-control" value="4.00" id="length_mm">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="width_mm">Width (mm)</label>
+                            <input type="text" class="form-control" value="4.00" id="width_mm">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="depth_mm">Depth (mm)</label>
+                            <input type="text" class="form-control" value="2.00" id="depth_mm">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary" id="filter">Diamond Cost</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <!--DATA TABLE-->
+            <div class="col-md-9">
+                <div id="table-area" class="">
+                    <table id="table" class="table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th class="table-head">carat</th>
+                                <th class="table-head">cut</th>
+                                <th class="table-head">color</th>
+                                <th class="table-head">clarity</th>
+                                <th class="table-head">depth</th>
+                                <th class="table-head">table</th>
+                                <th class="table-head">length</th>
+                                <th class="table-head">width</th>
+                                <th class="table-head">depth</th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="footer" style="margin: top 1px;">
+        <p>Thank you for choosing us to guide you through this special ocassion!</p>
+    </div> -->
+
+</body>
+
+</html>
