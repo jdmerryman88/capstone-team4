@@ -28,12 +28,24 @@ def makePredictions():
     content = request.json["data"]
 
     # parse
-    sex_flag = int(content["sex_flag"])
-    age = float(content["age"])
-    fare = float(content["fare"])
-    familySize = int(content["familySize"])
-    p_class = int(content["p_class"])
-    embarked = content["embarked"]
+    carat = float(content["carat"])
+    cut = float(content["cut"])
+    color = int(content["color"])
+    clarity = int(content['clarity'])
+    tdepth = float(content['tdepth'])
+    table = float(content["table"])
+    length = float(content["length"])
+    width = float(content["width"])
+    depth = float(content["depth"])
+    
+    # length_mm = int(content['length'])
+    # width_mm = string(content['width'])
+    # depth_mm = string(content['depth'])
+    # age = float(content["age"])
+    # fare = float(content["fare"])
+    # familySize = int(content["familySize"])
+    # p_class = int(content["p_class"])
+    # embarked = content["embarked"]
 
     # #dummy data
     # sex_flag = 1
@@ -42,10 +54,11 @@ def makePredictions():
     # familySize = 2
     # p_class = 1
     # embarked = "C"
-
-    prediction = modelHelper.makePredictions(sex_flag, age, fare, familySize, p_class, embarked)
-    print(prediction)
+    
+    prediction = modelHelper.makePredictions(carat, cut, color, clarity, tdepth, table, length, width, depth)
+    
     return(jsonify({"ok": True, "prediction": str(prediction)}))
+    
 
 ####################################
 # ADD MORE ENDPOINTS
