@@ -23,20 +23,20 @@ def home():
         # Return template and data
         return render_template("index.html")
 
-@app.route("/ml")
-def mlmodel():
-        # Return template and data
-        return render_template("indexml.html")
+# @app.route("/ml")
+# def mlmodel():
+#         # Return template and data
+#         return render_template("indexml.html")
 
-@app.route("/tab1")
-def tableau1():
-        # Return template and data
-        return render_template("indextab1.html")
+# @app.route("/tab1")
+# def tableau1():
+#         # Return template and data
+#         return render_template("indextab1.html")
 
-@app.route("/tab2")
-def tableau2():
-        # Return template and data
-        return render_template("indextab2.html")
+# @app.route("/tab2")
+# def tableau2():
+#         # Return template and data
+#         return render_template("indextab2.html")
 
 @app.route("/table")
 def table():
@@ -47,7 +47,6 @@ def table():
 def about_us():
         # Return template and data
         return render_template("indexaboutus.html")
-
 
 
 @app.route("/makePredictions", methods=["POST"]) # 
