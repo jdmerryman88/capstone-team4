@@ -12,11 +12,11 @@ function makePredictions() {
     var cut = $("#cut").val();
     var color = $("#color").val();
     var clarity = $("#clarity").val();
-    var depth = $("#depth").val();
+    var tdepth = $("#tdepth").val();    
     var table = $("#table").val();
-    var length = $("#length_mm").val();
-    var width = $("#width_mm").val();
-    var depth = $("#depth_mm").val();
+    var length = $("#length").val();
+    var width = $("#width").val();
+    var depth = $("#depth").val();
 
     // create the payload
     var payload = {
@@ -24,11 +24,11 @@ function makePredictions() {
         "cut": cut,
         "color": color,
         "clarity": clarity,
-        "depth": depth,
+        "tdepth" : tdepth,
         "table": table,
-        "length_mm" : length,
-        "width_mm" : width,
-        "depth_mm" : depth,
+        "length" : length,
+        "width" : width,
+        "depth" : depth,
     }
 
     // Perform a POST request to the query URL
@@ -39,13 +39,9 @@ function makePredictions() {
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
             // print it
-            console.log(returnedData);
-
-            if (returnedData["prediction"] == 1) {
-                $("#output").text("You Survived!");
-            } else {
-                $("#output").text("You Died!");
-            }
+            console.log(returnedData['prediction']);
+            $("#output").text("Your diamond should cost $" + returnedData['prediction']);
+            
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);
