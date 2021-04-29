@@ -38,22 +38,7 @@ def makePredictions():
     width = float(content["width"])
     depth = float(content["depth"])
     
-    # length_mm = int(content['length'])
-    # width_mm = string(content['width'])
-    # depth_mm = string(content['depth'])
-    # age = float(content["age"])
-    # fare = float(content["fare"])
-    # familySize = int(content["familySize"])
-    # p_class = int(content["p_class"])
-    # embarked = content["embarked"]
-
-    # #dummy data
-    # sex_flag = 1
-    # age = 25
-    # fare = 25
-    # familySize = 2
-    # p_class = 1
-    # embarked = "C"
+    
     
     prediction = modelHelper.makePredictions(carat, cut, color, clarity, tdepth, table, length, width, depth)
     
