@@ -34,7 +34,7 @@
     
     
     function buildTable() {
-        d3.csv("../data/diamonds.csv").then(function(diamondsPrice) {
+        d3.csv("static/data/diamonds.csv").then(function(diamondsPrice) {
     
             var caratFilter = parseInt($("#carat").val()); 
             var cutFilter = $("#cut").val();
