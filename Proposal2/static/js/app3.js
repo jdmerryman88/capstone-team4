@@ -1,5 +1,3 @@
-// d3.csv("../data/diamonds.csv").then(function (diamondsPrice) {
-//     console.log(diamondsPrice);
 
     $(document).ready(function() {
 
@@ -27,7 +25,7 @@
         $("#color").text("");
         $("#clarity").text("");
         $("#depth").val("");
-        $("#table").val("");
+        $("#tab").val("");
         $("#length").val("");
         $("#width").val("");
         $("#depth").val("");
@@ -42,20 +40,22 @@
             var cutFilter = $("#cut").val();
             var colorFilter = $("#color").val();
             var clarityFilter = $("#clarity").val();
-            var depthFilter = parseInt($("#depth").val());
-            var tableFilter = parseInt($("#table").val());
-            var lengthFilter = parseInt($("#length").val());
-            var widthFilter = parseInt($("#width").val());
-            var depthFilter = parseInt($("#depth").val());
+            var priceFilter = parseInt($("#price").val());
+            var tdepthFilter = parseInt($("#tdepth").val());
+            var tableFilter = parseInt($("#tab").val());
+            var lengthFilter = parseInt($("#length_mm").val());
+            var widthFilter = parseInt($("#width_mm").val());
+            var depthFilter = parseInt($("#depth_mm").val());
     
             // apply filters
-            var filteredData = diamondsPrice
-    
+            var filteredData = diamondsPrice;
+            
+
             if (caratFilter) {
                 filteredData = filteredData.filter(row => parseInt(row.carat) === (caratFilter));
                }
             if (cutFilter) {
-                filteredData = filteredData.filter(row => (row.cut) === (cutFilter))
+                filteredData = filteredData.filter(row => (row.cut) === (cutFilter));
                 } 
             if (colorFilter) {
                 filteredData = filteredData.filter(row => (row.color) === (colorFilter));
@@ -63,38 +63,30 @@
             if (clarityFilter) {
                 filteredData = filteredData.filter(row => (row.clarity) === (clarityFilter));
                 } 
-            if (depthFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.depth) === (depthFilter));
+            if (priceFilter) {
+                    filteredData = filteredData.filter(row => parseInt(row.price) === (priceFilter));
+                    } 
+            if (tdepthFilter) {
+                filteredData = filteredData.filter(row => parseInt(row.depth) === (tdepthFilter));
                 }   
             if (tableFilter) {
                 filteredData = filteredData.filter(row => parseInt(row.table) === (tableFilter));
                 } 
             if (lengthFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.length) === (lengthFilter));
+                filteredData = filteredData.filter(row => parseInt(row.length_mm) === (lengthFilter));
                 } 
             if (widthFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.widht) === (widthFilter));
+                filteredData = filteredData.filter(row => parseInt(row.width_mm) === (widthFilter));
                 } 
             if (depthFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.depth) === (depthFilter));
+                filteredData = filteredData.filter(row => parseInt(row.depth_mm) === (depthFilter));
                 } 
-           // // see if we have any data left
-            // else (filteredData.length === 0) {
-            //     alert("No Data Found!");} 
-           
-        //    else {
-        //         filteredData.forEach(function(row) {
-        //             row.latitude = parseFloat(row.latitude).toFixed(2);
-        //             row.longitude = parseFloat(row.longitude).toFixed(2)
-        //         })
-    }
-                
+    
             buildTableString(filteredData);
         }); 
-    }
     
     function buildTableString(diamondsPrice) {
-    
+        
         // JQUERY creates an HTML string
         var tbody = $("#table>tbody");
         //clear table
@@ -103,7 +95,7 @@
         //destroy datatable
         $("table").DataTable().clear().destroy();
     
-        var datarows = diamondsPrice.map(x => [x["carat"], x["cut"], x["color"], x["clarity"],  x["depth"], x["table"], x["length"] ,x["width"],x["depth"]])
+        var datarows = diamondsPrice.map(x => [x["carat"], x["cut"], x["color"], x["clarity"], x["price"],  x["depth"], x["table"], x["length_mm"] ,x["width_mm"],x["depth_mm"]])
     
         //redraw
         $("#table").DataTable({
@@ -111,7 +103,7 @@
             data: datarows,
             "defaultContent": "", 
     
-            "pageLength": 15, 
+            "pageLength": 20, 
             dom: 'Bfrtip', //lbfrtip if you want the length changing thing
             buttons: [
                 { extend: 'copyHtml5' },
@@ -127,4 +119,4 @@
                 }
             ]
         });
-    }; 
+    }}; 

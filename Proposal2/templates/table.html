@@ -89,108 +89,135 @@
             <div class="col-md-3">
                 <!--FILTERS-->
                 <div class="card border-primary mb-3">
-            <div class="card-header">Filters</div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <div class="form-group">
-                                <label class="col-form-label" for="carat">Carat</label>
-                                <input type="text" class="form-control" value="0.25" id="carat">
+                    <div class="card-header">Filters</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="carat">Carat</label>
+                                    <input type="text" class="form-control" value="" id="carat">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="price">Price</label>
+                                    <input type="text" class="form-control" value="" id="price">
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="cut">Cut</label>
-                            <select id="cut">
-                                <option value="1">Ideal</option>
-                                <option value="2">Premium</option>
-                                <option value="3">Very Good</option>
-                                <option value="4">Good</option>
-                                <option value="5">Fair</option>
-                                <option value="6">Poor</option>
-                            </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="cut">Cut</label></br>
+                                    <select id="cut">
+                                        <option value=""></option>
+                                        <option value="Ideal">Ideal</option>
+                                        <option value="Premium">Premium</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="color">Color</label></br>
+                                    <select id="color">
+                                        <option value=""></option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                        <option value="J">J</option>
+                                        <option value="K">K</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="color">Color</label></br>
-                            <select id="color">
-                                <option value="1">D</option>
-                                <option value="2">E</option>
-                                <option value="3">F</option>
-                                <option value="4">G</option>
-                                <option value="5">H</option>
-                                <option value="6">I</option>
-                                <option value="7">J</option>
-                                <option value="8">K</option>
-                                <option value="9">L</option>
-                                <option value="10">M</option>
-                            </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="clarity">Clarity</label></br>
+                                    <select id="clarity">
+                                        <option value=""></option>
+                                        <option value="FL">FL</option>
+                                        <option value="IF">IF</option>
+                                        <option value="VVS1">VVS1</option>
+                                        <option value="VVS2">VVS2</option>
+                                        <option value="VS1">VS1</option>
+                                        <option value="VS2">VS2</option>
+                                        <option value="SI1">SI1</option>
+                                        <option value="SI2">SI2</option>
+                                        <option value="SI3">SI3</option>
+                                        <option value="I1">I1</option>
+                                        <option value="I2">I2</option>
+                                        <option value="I3">I3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="tdepth">Total Depth</label>
+                                    <input type="text" class="form-control" value="" id="tdepth">
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label class="col-form-label" for="clarity">Clarity</label></br>
-                            <select id="clarity">
-                                <option value="1">FL</option>
-                                <option value="2">IF</option>
-                                <option value="3">VVS1</option>
-                                <option value="4">VVS2</option>
-                                <option value="5">VS1</option>
-                                <option value="6">VS2</option>
-                                <option value="7">SI1</option>
-                                <option value="8">SI2</option>
-                                <option value="9">SI3</option>
-                                <option value="10">I1</option>
-                                <option value="11">I2</option>
-                                <option value="12">I3</option>
-                            </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="length_mm">Length (mm)</label>
+                                    <input type="text" class="form-control" value="" id="length_mm">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="width_mm">Width (mm)</label>
+                                    <input type="text" class="form-control" value="" id="width_mm">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="depth">Depth</label>
-                            <input type="text" class="form-control" value="60.00" id="depth">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="depth_mm">Depth (mm)</label>
+                                    <input type="text" class="form-control" value="" id="depth_mm">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="tab">Table</label>
+                                    <input type="text" class="form-control" value="" id="tab">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-        
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-form-label" for="table">Table</label>
-                            <input type="text" class="form-control" value="60.00" id="table">
+                        <div class="btn-group-sm">
+                            <button id="filter-btn" type="button" class="btn btn-primary">Filter Table</button>
+                            <button id="filter-clear" type="button" class="btn btn-success">Clear Filters</button>
                         </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="length_mm">Length (mm)</label>
-                            <input type="text" class="form-control" value="4.00" id="length_mm">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="width_mm">Width (mm)</label>
-                            <input type="text" class="form-control" value="4.00" id="width_mm">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="depth_mm">Depth (mm)</label>
-                            <input type="text" class="form-control" value="2.00" id="depth_mm">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" id="filter">Diamond Cost</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
             <!--DATA TABLE-->
             <div class="col-md-9">
                 <div id="table-area" class="">
                     <table id="table" class="table-hover table-striped">
                         <thead>
                             <tr>
-                                <th class="table-head">carat</th>
-                                <th class="table-head">cut</th>
-                                <th class="table-head">color</th>
-                                <th class="table-head">clarity</th>
-                                <th class="table-head">depth</th>
-                                <th class="table-head">table</th>
-                                <th class="table-head">length</th>
-                                <th class="table-head">width</th>
-                                <th class="table-head">depth</th>
+                                <th class="table-head">Carat</th>
+                                <th class="table-head">Cut</th>
+                                <th class="table-head">Color</th>
+                                <th class="table-head">Clarity</th>
+                                <th class="table-head">Price $</th>
+                                <th class="table-head">Total Depth</th>
+                                <th class="table-head">Table</th>
+                                <th class="table-head">Length</th>
+                                <th class="table-head">Width</th>
+                                <th class="table-head">Depth</th>
 
                             </tr>
                         </thead>
@@ -199,12 +226,7 @@
                 </div>
             </div>
         </div>
-    <div id="footer" style="margin: top 1px;">
-    <p>Thank you for choosing us to guide you through this special ocassion!</p>
     </div>
-    </div>
-
-
 </body>
 
 </html>
