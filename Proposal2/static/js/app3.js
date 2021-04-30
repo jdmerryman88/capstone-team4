@@ -20,7 +20,8 @@
     }); 
     
     function resetFilters() {
-        $("#carat").val("");
+        $("#caratmax").val("");
+        $("#caratmin").val("");
         $("#cut").val("");
         $("#color").text("");
         $("#clarity").text("");
@@ -34,25 +35,30 @@
     
     
     function buildTable() {
-        d3.csv("static/data/diamonds.csv").then(function(diamondsPrice) {
+        d3.csv("../static/data/diamonds.csv").then(function(diamondsPrice) {
     
-            var caratFilter = parseInt($("#carat").val()); 
+            var caratMax = parseFloat($("#caratmax").val()); 
+            var caratMin = parseFloat($("#caratmin").val()); 
             var cutFilter = $("#cut").val();
             var colorFilter = $("#color").val();
             var clarityFilter = $("#clarity").val();
-            var priceFilter = parseInt($("#price").val());
-            var tdepthFilter = parseInt($("#tdepth").val());
-            var tableFilter = parseInt($("#tab").val());
-            var lengthFilter = parseInt($("#length_mm").val());
-            var widthFilter = parseInt($("#width_mm").val());
-            var depthFilter = parseInt($("#depth_mm").val());
+            var priceMin = parseFloat($("#pricemin").val());
+            var priceMax = parseFloat($("#pricemax").val());
+            var tdepthFilter = parseFloat($("#tdepth").val());
+            var tableFilter = parseFloat($("#tab").val());
+            var lengthFilter = parseFloat($("#length_mm").val());
+            var widthFilter = parseFloat($("#width_mm").val());
+            var depthFilter = parseFloat($("#depth_mm").val());
     
             // apply filters
             var filteredData = diamondsPrice;
             
 
-            if (caratFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.carat) === (caratFilter));
+            if (caratMax) {
+                filteredData = filteredData.filter(row => parseFloat(row.carat) <= parseFloat(caratMax)); 
+               }
+            if (caratMin) {
+                filteredData = filteredData.filter(row => parseFloat(row.carat) >= parseFloat(caratMin));
                }
             if (cutFilter) {
                 filteredData = filteredData.filter(row => (row.cut) === (cutFilter));
@@ -63,23 +69,26 @@
             if (clarityFilter) {
                 filteredData = filteredData.filter(row => (row.clarity) === (clarityFilter));
                 } 
-            if (priceFilter) {
-                    filteredData = filteredData.filter(row => parseInt(row.price) === (priceFilter));
+            if (priceMin) {
+                    filteredData = filteredData.filter(row => parseFloat(row.price) >= (priceMin));
                     } 
+            if (priceMax) {
+                        filteredData = filteredData.filter(row => parseFloat(row.price) <= (priceMax));
+                        } 
             if (tdepthFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.depth) === (tdepthFilter));
+                filteredData = filteredData.filter(row => parseFloat(row.depth) === (tdepthFilter));
                 }   
             if (tableFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.table) === (tableFilter));
+                filteredData = filteredData.filter(row => parseFloat(row.table) === (tableFilter));
                 } 
             if (lengthFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.length_mm) === (lengthFilter));
+                filteredData = filteredData.filter(row => parseFloat(row.length_mm) === (lengthFilter));
                 } 
             if (widthFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.width_mm) === (widthFilter));
+                filteredData = filteredData.filter(row => parseFloat(row.width_mm) === (widthFilter));
                 } 
             if (depthFilter) {
-                filteredData = filteredData.filter(row => parseInt(row.depth_mm) === (depthFilter));
+                filteredData = filteredData.filter(row => parseFloat(row.depth_mm) === (depthFilter));
                 } 
     
             buildTableString(filteredData);
