@@ -34,7 +34,7 @@ function makePredictions() {
     // Perform a POST request to the query URL
     $.ajax({
         type: "POST",
-        url: "/makePredictions",
+        url: "/ml",
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {

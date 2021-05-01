@@ -23,6 +23,16 @@ def home():
         # Return template and data
         return render_template("index.html")
 
+@app.route("/table")
+def table():
+        # Return template and data
+        return render_template("table.html")
+
+@app.route("/about")
+def about_us():
+        # Return template and data
+        return render_template("indexaboutus.html")
+        
 @app.route("/ml")
 def mlmodel():
         # Return template and data
@@ -38,18 +48,7 @@ def mlmodel():
 #         # Return template and data
 #         return render_template("indextab2.html")
 
-@app.route("/table")
-def table():
-        # Return template and data
-        return render_template("table.html")
-
-@app.route("/about")
-def about_us():
-        # Return template and data
-        return render_template("indexaboutus.html")
-
-
-@app.route("/makePredictions", methods=["POST"])
+@app.route("/ml", methods=["POST"])
 def makePredictions():
     content = request.json["data"]
 
