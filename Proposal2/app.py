@@ -32,21 +32,21 @@ def table():
 def about_us():
         # Return template and data
         return render_template("indexabout.html")
+
+@app.route("/resources")
+def resources():
+        # Return template and data
+        return render_template("indexresources.html")
         
 @app.route("/ml")
 def mlmodel():
         # Return template and data
         return render_template("indexml.html")
 
-# @app.route("/tab1")
-# def tableau1():
-#         # Return template and data
-#         return render_template("indextab1.html")
-
-# @app.route("/tab2")
-# def tableau2():
-#         # Return template and data
-#         return render_template("indextab2.html")
+@app.route("/dashboard")
+def dashboard():
+        # Return template and data
+        return render_template("indextableau.html")
 
 @app.route("/ml", methods=["POST"])
 def makePredictions():
