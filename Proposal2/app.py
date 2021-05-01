@@ -31,7 +31,7 @@ def table():
 @app.route("/about")
 def about_us():
         # Return template and data
-        return render_template("indexaboutus.html")
+        return render_template("indexabout.html")
         
 @app.route("/ml")
 def mlmodel():
