@@ -1,4 +1,7 @@
 .ipynb_checkpoints
 .Ds_store
 __pycache__/
-
+.vscode
+data/.ipynb_checkpoints
+ml_work\__pycache__
+notebook\.ipynb_checkpoints

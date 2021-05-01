@@ -13,7 +13,7 @@ class ModelHelper():
         input_pred = [[carat, cut, color, clarity, tdepth, table, length, width, depth]]
 
 
-        filename = 'finalized_model.sav'
+        filename = './model/finalized_model.sav'
         ada_load = pickle.load(open(filename, 'rb'))
 
         X = np.array(input_pred)

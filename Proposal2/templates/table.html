@@ -48,7 +48,11 @@
 
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        <!-- <li class="nav-item active">
+            <a class="nav-link" href="/">Info for your Perfect Diamond!
+        <span class="sr-only">(current)</span>
+            </a> -->
+        </li>
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
@@ -58,7 +62,7 @@
                     <a class="nav-link" href="/dashboard">Visualizations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/makePredictions">Predictor</a>
+                    <a class="nav-link" href="/ml">Predictor</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/table">Data</a>
@@ -73,14 +77,11 @@
         </div>
     </nav>
 
-    <!--JUMBOTRON-->
-    <!--<div class="jumbotron text-center">
-        <h3 class="display-3">Dallas Crime Data for 2020</h3>
-    </div>-->
-
     <div class="row text-center" style="margin-top:3%">
         <div class="col-md-12">
-            <h6 class="display-4">Data</h6>
+            <h6 class="display-4"><B>Data</B></h6>
+            <p><b>FILTER RANGE</b> <b>Carat:</b> 0.2->5.00, <b>Price:</b> 345->18018, <b>Total depth:</b> 43.0->79.0, <b>Length:</b> 0.0->10.74, <b>Width:</b> 0.0->58.9, <b>Depth:</b> 0.0->31.8, <b>Table:</b> 43.0->95.0</p>
+            <!-- <p><b>FILTER RANGE</b> Carat: 0.2->5.00, Price: 345->18018, Total depth: 43.0->79.0, Length: 0.0->10.74, Width: 0.0->58.9, Depth: 0.0->31.8, Table: 43.0->95.0</p> -->
         </div>
     </div>
 
@@ -88,8 +89,8 @@
         <div class="row margin-top-50">
             <div class="col-md-3">
                 <!--FILTERS-->
-                <div class="card border-primary mb-3">
-                    <div class="card-header">Filters</div>
+                <div class="card border-secondary mb-3">
+                    <div class="card-header"><B>Filters</B></div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
@@ -132,9 +133,9 @@
                                         <option value="H">H</option>
                                         <option value="I">I</option>
                                         <option value="J">J</option>
-                                        <option value="K">K</option>
+                                        <!-- <option value="K">K</option>
                                         <option value="L">L</option>
-                                        <option value="M">M</option>
+                                        <option value="M">M</option> -->
                                     </select>
                                 </div>
                             </div>
@@ -196,8 +197,8 @@
                             </div>
                         </div>
                         <div class="btn-group-sm">
-                            <button id="filter-btn" type="button" class="btn btn-primary">Filter Table</button>
-                            <button id="filter-clear" type="button" class="btn btn-success">Clear Filters</button>
+                            <button id="filter-btn" type="button" class="btn btn-secondary">Filter Table</button>
+                            <button id="filter-clear" type="button" class="btn btn-info">Clear Filters</button>
                         </div>
                     </div>
                 </div>
