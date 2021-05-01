@@ -27,11 +27,16 @@ function resetFilters() {
     $("#cut").val("");
     $("#color").val("");
     $("#clarity").val("");
-    $("#depth").val("");
-    $("#tab").val("");
-    $("#length").val("");
-    $("#width").val("");
-    $("#depth").val("");
+    $("#tdepthmin").val("0");
+    $("#tdepthmax").val("100000");
+    $("#tabmin").val("0");
+    $("#tabmax").val("100000");
+    $("#length_mm_min").val("0");
+    $("#length_mm_max").val("100000");
+    $("#width_mm_min").val("0");
+    $("#width_mm_max").val("100000");
+    $("#depth_mm_min").val("0");
+    $("#depth_mm_min").val("100000");
 }
 
 
@@ -46,11 +51,16 @@ function buildTable() {
         var clarityFilter = $("#clarity").val();
         var priceMin = parseFloat($("#pricemin").val());
         var priceMax = parseFloat($("#pricemax").val());
-        var tdepthFilter = parseFloat($("#tdepth").val());
-        var tableFilter = parseFloat($("#tab").val());
-        var lengthFilter = parseFloat($("#length_mm").val());
-        var widthFilter = parseFloat($("#width_mm").val());
-        var depthFilter = parseFloat($("#depth_mm").val());
+        var tdepthMin = parseFloat($("#tdepthmin").val());
+        var tdepthMax = parseFloat($("#tdepthmax").val());
+        var tableMin = parseFloat($("#tabmin").val());
+        var tableMax = parseFloat($("#tabmax").val());
+        var lengthMin = parseFloat($("#length_mm_min").val());
+        var lengthMax = parseFloat($("#length_mm_max").val());
+        var widthMin = parseFloat($("#width_mm_min").val());
+        var widthMax = parseFloat($("#width_mm_max").val());
+        var depthMin = parseFloat($("#depth_mm_min").val());
+        var depthMax = parseFloat($("#depth_mm_max").val());
 
         // apply filters
         var filteredData = diamondsPrice;
@@ -77,20 +87,35 @@ function buildTable() {
         if (priceMax) {
             filteredData = filteredData.filter(row => parseFloat(row.price) <= (priceMax));
         }
-        if (tdepthFilter) {
-            filteredData = filteredData.filter(row => parseFloat(row.depth) === (tdepthFilter));
+        if (tdepthMin) {
+            filteredData = filteredData.filter(row => parseFloat(row.depth) >= (tdepthMin));
         }
-        if (tableFilter) {
-            filteredData = filteredData.filter(row => parseFloat(row.table) === (tableFilter));
+        if (tdepthMax) {
+            filteredData = filteredData.filter(row => parseFloat(row.depth) <= (tdepthMax));
         }
-        if (lengthFilter) {
-            filteredData = filteredData.filter(row => parseFloat(row.length_mm) === (lengthFilter));
+        if (tableMin) {
+            filteredData = filteredData.filter(row => parseFloat(row.table) >= (tableMin));
         }
-        if (widthFilter) {
-            filteredData = filteredData.filter(row => parseFloat(row.width_mm) === (widthFilter));
+        if (tableMax) {
+            filteredData = filteredData.filter(row => parseFloat(row.table) <= (tableMax));
         }
-        if (depthFilter) {
-            filteredData = filteredData.filter(row => parseFloat(row.depth_mm) === (depthFilter));
+        if (lengthMin) {
+            filteredData = filteredData.filter(row => parseFloat(row.length_mm) >= (lengthMin));
+        }
+        if (lengthMax) {
+            filteredData = filteredData.filter(row => parseFloat(row.length_mm) <= (lengthMax));
+        }
+        if (widthMin) {
+            filteredData = filteredData.filter(row => parseFloat(row.width_mm) >= (widthMin));
+        }
+        if (widthMin) {
+            filteredData = filteredData.filter(row => parseFloat(row.width_mm) <= (widthMax));
+        }
+        if (depthMin) {
+            filteredData = filteredData.filter(row => parseFloat(row.depth_mm) >= (depthMin));
+        }
+        if (depthMax) {
+            filteredData = filteredData.filter(row => parseFloat(row.depth_mm) <= (depthMax));
         }
 
         buildTableString(filteredData);
